@@ -1,0 +1,90 @@
+{
+  "papers": [
+    {
+      "title": "AI Agent Systems: Architectures, Applications, and Evaluation",
+      "authors": ["Bin Xu"],
+      "abstract": "Comprehensive survey of AI agent systems covering architectures, applications, and evaluation methodologies. Published in January 2026.",
+      "url": "https://arxiv.org/abs/2601.01743",
+      "published_date": "2026-01-05",
+      "categories": ["cs.AI", "cs.LG"],
+      "source": "arXiv"
+    },
+    {
+      "title": "AI Agents: Evolution, Architecture, and Real-World Applications",
+      "authors": ["Multiple Authors"],
+      "abstract": "Examines the evolution, architecture, and practical applications of AI agents from early rule-based systems to modern sophisticated systems integrating large language models with dedicated modules for perception, planning, and tool use.",
+      "url": "https://arxiv.org/abs/2503.12687",
+      "published_date": "2025-03-16",
+      "categories": ["cs.AI", "cs.LG"],
+      "source": "arXiv"
+    },
+    {
+      "title": "Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions",
+      "authors": ["Mohamad Abou Ali", "Other Authors"],
+      "abstract": "Systematic PRISMA-based literature review of 90 studies, categorizing them using a dual-paradigm framework to trace research trends and evaluate architectures by their appropriate standards.",
+      "url": "https://arxiv.org/abs/2510.25445",
+      "published_date": "2025-10-29",
+      "categories": ["cs.AI", "cs.LG"],
+      "source": "arXiv"
+    }
+  ],
+  "projects": [
+    {
+      "name": "crewAI",
+      "description": "Framework for orchestrating role-playing, autonomous AI agents. Lean, lightning-fast Python framework built entirely from scratch, completely independent of LangChain or other agent frameworks.",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "stars": "High",
+      "language": "Python",
+      "last_updated": "2026",
+      "source": "GitHub"
+    },
+    {
+      "name": "awesome-ai-agents",
+      "description": "A curated list of AI autonomous agents with multi-framework support and unified programming interface.",
+      "url": "https://github.com/e2b-dev/awesome-ai-agents",
+      "stars": "Medium",
+      "language": "Multiple",
+      "last_updated": "2026",
+      "source": "GitHub"
+    },
+    {
+      "name": "Microsoft Agent Framework",
+      "description": "Framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.",
+      "url": "https://github.com/microsoft/agent-framework",
+      "stars": "High",
+      "language": "Python, .NET",
+      "last_updated": "2026",
+      "source": "GitHub"
+    },
+    {
+      "name": "VoltAgent",
+      "description": "AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework.",
+      "url": "https://github.com/VoltAgent/voltagent",
+      "stars": "Growing",
+      "language": "TypeScript",
+      "last_updated": "2026",
+      "source": "GitHub"
+    }
+  ],
+  "models": [
+    {
+      "name": "Reflective Agents Trend",
+      "description": "By 2026, robust agent toolkits where adding a new skill to your AI (e.g., 'connect to Salesforce') is as simple as installing a plugin. The agent can discover it and start using it securely and effectively.",
+      "url": "https://huggingface.co/blog/aufklarer/ai-trends-2026-test-time-reasoning-reflective-agen",
+      "downloads": "Trending",
+      "likes": "High",
+      "tags": ["AI Agents", "2026 Trends", "Tool Integration"],
+      "source": "Hugging Face"
+    },
+    {
+      "name": "Hugging Face AI Agents Course",
+      "description": "Official course for learning how to build and deploy AI agents using Hugging Face tools and infrastructure.",
+      "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
+      "downloads": "Educational",
+      "likes": "Learning Resource",
+      "tags": ["Education", "AI Agents", "Hugging Face"],
+      "source": "Hugging Face"
+    }
+  ],
+  "last_updated": "2026-02-22T13:00:00Z"
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+# Setup cron job for daily AI Dashboard update with RAG
+
+WORKSPACE="/home/clawd/.openclaw/workspace"
+SCRIPT_PATH="$WORKSPACE/ai-dashboard/rag_system/update_dashboard_with_rag.sh"
+CRON_LOG="$WORKSPACE/ai-dashboard/cron.log"
+
+# 建立 cron 任務（每天上午 8 點執行）
+(crontab -l 2>/dev/null; echo "0 8 * * * $SCRIPT_PATH >> $CRON_LOG 2>&1") | crontab -
+
+echo "✅ 每日自動更新任務已設定"
+echo "⏰ 執行時間：每天上午 8:00"
+echo "📄 腳本路徑：$SCRIPT_PATH"
+echo "📝 日誌檔案：$CRON_LOG"

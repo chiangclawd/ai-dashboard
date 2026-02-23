@@ -4,34 +4,34 @@
 
 ### 📰 昨日 AI 大事件 (2026-02-22)
 
-_最後更新：2026-02-23 06:27_
+_最後更新：2026-02-23 06:36_
 
 ---
 
 ## 🔥 頭條新聞
 
-- **[It&#8217;s MAGA v Broligarch in the battle over prediction markets](https://www.theverge.com/policy/881139/broligarch-prediction-markets)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  Hello and welcome to Regulator, a newsletter for Verge subscribers about the love-hate (but mostly hate) relationship between Silicon Valley and Washington. I hope everyone got to celebrate George Washington's birthday in their preferred manner: skiing, staycationing, subscribing to The Verge if you haven't already, et
-- **[Money no longer matters to AI’s top talent](https://www.theverge.com/podcast/880778/ai-talent-war-hiring-frenzy-openai-anthropic-ipo)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  Today on Decoder we’re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companies in the San Francisco Bay Area. Nowadays, such companies are
+- **[It&#8217;s MAGA v Broligarch in the battle over prediction markets](https://www.theverge.com/policy/881139/broligarch-prediction-markets)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  大家好，歡迎來到 Regulator，這是一份為 Verge 訂閱者提供的時事通訊，內容涉及矽谷和華盛頓之間的愛恨（但主要是恨）關係。我希望每個人都能以自己喜歡的方式慶祝喬治華盛頓的生日：滑雪、居家度假、訂閱 The Verge（如果還沒有訂閱的話）等等。預測：這將是一場混亂的政治 […]
+- **[Money no longer matters to AI’s top talent](https://www.theverge.com/podcast/880778/ai-talent-war-hiring-frenzy-openai-anthropic-ipo)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  今天在 Decoder 上我們將討論人工智慧人才的爭奪戰。目前，全球最熱門的就業市場是人工智慧研究人員。這些人絕大多數都集中在舊金山灣區少數價值龐大、發展極為迅速的公司。如今，這類公司正在支付[...]
 
 ## 💼 產業動態
 
-- **[The speech police came for Colbert](https://www.theverge.com/podcast/881222/fcc-colbert-talarico-brendan-carr-vergecast)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  Generally speaking, arcane and mostly unenforced FCC rules are not the province of late night talk shows. FCC Commissioner Brendan Carr seems intent on changing that, though; not long after causing a ruckus that briefly took Jimmy Kimmel off the air, his vague threats appear to have been enough to convince CBS to tell 
-- **[The AI security nightmare is here and it looks suspiciously like lobster](https://www.theverge.com/ai-artificial-intelligence/881574/cline-openclaw-prompt-injection-hack)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  A hacker tricked a popular AI coding tool into installing OpenClaw - the viral, open-source AI agent OpenClaw that "actually does things" - absolutely everywhere. Funny as a stunt, but a sign of what to come as more and more people let autonomous software use their computers on their behalf. The hacker took advantage o
-- **[The Pitt has a sharp take on AI](https://www.theverge.com/entertainment/881016/hbo-the-pitt-generative-ai-charting)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  Each episode of HBO's The Pitt features some degree of medical trauma that almost makes the hospital drama feel like a horror series. Some patients are dealing with gnarly lacerations while others are fighting off vicious blood infections that could rob them of their limbs, and the chaos of working in an emergency room
-- **[OpenAI&#8217;s first ChatGPT gadget could be a smart speaker with a camera](https://www.theverge.com/ai-artificial-intelligence/882077/openai-chatgpt-smart-speaker-camera-glasses-lamp)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  OpenAI's first hardware release will be a smart speaker with a camera that will probably cost between $200 and $300, according to The Information. The device will be able to recognize things like "items on a nearby table or conversations people are having in the vicinity," The Information says, and it will have a Face 
+- **[The speech police came for Colbert](https://www.theverge.com/podcast/881222/fcc-colbert-talarico-brendan-carr-vergecast)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  一般來說，晦澀難懂且大多未執行的聯邦通訊委員會規則不屬於深夜脫口秀節目的範疇。不過，FCC 委員 Brendan Carr 似乎有意改變這一現狀；在造成吉米金梅爾短暫播出的騷動後不久，他含糊的威脅似乎足以說服哥倫比亞廣播公司告訴斯蒂芬[…]
+- **[The AI security nightmare is here and it looks suspiciously like lobster](https://www.theverge.com/ai-artificial-intelligence/881574/cline-openclaw-prompt-injection-hack)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  一名駭客欺騙了一種流行的人工智慧編碼工具來安裝 OpenClaw——一種病毒式的開源人工智慧代理 OpenClaw，它「實際上可以做事」——幾乎無所不在。作為一個噱頭很有趣，但這表明隨著越來越多的人讓自主軟體代表他們使用他們的計算機，將會發生什麼。駭客利用了 [...]
+- **[The Pitt has a sharp take on AI](https://www.theverge.com/entertainment/881016/hbo-the-pitt-generative-ai-charting)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  HBO 的《皮特》的每一集都有一定程度的醫療創傷，幾乎讓這部醫院劇感覺像是一部恐怖連續劇。有些患者正在處理粗糙的撕裂傷，而另一些患者正在與可能奪走他們四肢的惡性血液感染作鬥爭，而在急診室工作的混亂經常[...]
+- **[OpenAI&#8217;s first ChatGPT gadget could be a smart speaker with a camera](https://www.theverge.com/ai-artificial-intelligence/882077/openai-chatgpt-smart-speaker-camera-glasses-lamp)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  根據 The Information 報導，OpenAI 的第一個硬體版本將是一款帶有相機的智慧揚聲器，售價可能在 200 至 300 美元之間。該訊息稱，該設備將能夠識別「附近桌子上的物品或人們在附近進行的對話」之類的東西，並且它將有一張臉 […]
 
 ## 🧠 深度觀點
 
-- **[Amazon blames human employees for an AI coding agent&#8217;s mistake](https://www.theverge.com/ai-artificial-intelligence/882005/amazon-blames-human-employees-for-an-ai-coding-agents-mistake)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  Amazon Web Services suffered a 13-hour outage to one system in December as a result of its AI coding assistant Kiro's actions, according to the Financial Times. Numerous unnamed Amazon employees told the FT that AI agent Kiro was responsible for the December incident affecting an AWS service in parts of mainland China.
-- **[Trump is making coal plants even dirtier as AI demands more energy](https://www.theverge.com/science/882288/trump-ai-data-center-power-plant-pollution-mercury-mats)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
-  The Trump administration just tossed out Biden-era restrictions on mercury and other toxic pollutants from power plants. It's repealing Mercury and Air Toxics Standards (MATS) just as electricity demand in the US ticks up with the buildout of new AI data centers. Those standards are particularly impactful when it comes
+- **[Amazon blames human employees for an AI coding agent&#8217;s mistake](https://www.theverge.com/ai-artificial-intelligence/882005/amazon-blames-human-employees-for-an-ai-coding-agents-mistake)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  根據《金融時報》報道，去年 12 月，由於人工智慧編碼助手 Kiro 的行為，亞馬遜網路服務的一個系統出現了 13 小時的中斷。多位不願透露姓名的亞馬遜員工告訴英國《金融時報》，人工智慧代理 Kiro 對 12 月影響中國大陸部分地區 AWS 服務的事件負有責任。熟悉的人[…]
+- **[Trump is making coal plants even dirtier as AI demands more energy](https://www.theverge.com/science/882288/trump-ai-data-center-power-plant-pollution-mercury-mats)**  _The Verge · AI · 2026-02-23 06:35 UTC_  
+  川普政府剛剛廢除了拜登時代對發電廠汞和其他有毒污染物的限制。隨著美國電力需求隨著新人工智慧資料中心的建設而增加，它正在廢除汞和空氣有毒物質標準（MATS）。這些標準對於燃煤電廠的污染特別有影響力[...]
 
 ## 🤖 RAG 資訊
 
@@ -73,7 +73,7 @@ _最後更新：2026-02-23 06:27_
 ## ⚙️ 設定狀態
 
 - ✅ 儀表板自動生成
-- ✅ RSS + RAG 資料整合
+- ✅ 多來源 RSS + RAG 資料整合
 - 📍 位置：`/home/ubuntu/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
 
 ## 🔄 更新 schedule

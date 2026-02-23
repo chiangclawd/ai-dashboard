@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""
-AI Daily Dashboard generator
-- Fetches fresh AI news from curated RSS feeds
-- Combines with RAG metadata to build Markdown + HTML dashboards
-"""
+"""AI Daily Dashboard generator with Traditional Chinese summaries."""
 
 from __future__ import annotations
 
@@ -12,34 +8,80 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
-from html import unescape, escape
+from html import escape, unescape
 from pathlib import Path
-from typing import List, Dict, Any
-from urllib.request import urlopen, Request
+from typing import Any, Dict, List
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 WORKSPACE = Path("/home/ubuntu/.openclaw/workspace/ai-dashboard")
 DASHBOARD_MD = WORKSPACE / "DASHBOARD.md"
 DASHBOARD_HTML = WORKSPACE / "index.html"
-RAG_DATA = WORKSPACE / "rag_data" / "rag_data.json"
+RAG_DATA_FILE = WORKSPACE / "rag_data" / "rag_data.json"
 LOG_FILE = WORKSPACE / "update.log"
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
+USER_AGENT = "Mozilla/5.0 (AI-Dashboard-Aggregator)"
+TRANSLATE_ENDPOINT = "https://translate.googleapis.com/translate_a/single"
+LOOKBACK_HOURS = 36
+MIN_ARTICLES = 6
+SUMMARY_LIMIT = 400
 
 RSS_SOURCES = [
-    {
-        "name": "The Verge · AI",
-        "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-    },
-    {
-        "name": "TechCrunch · Artificial Intelligence",
-        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
-    },
+    {"name": "The Verge · AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"},
+    {"name": "TechCrunch · Artificial Intelligence", "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
+    {"name": "MIT Technology Review · AI", "url": "https://www.technologyreview.com/feed/?category_name=artificial-intelligence"},
+    {"name": "Ars Technica · AI", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab"},
+    {"name": "AI Trends", "url": "https://www.aitrends.com/feed/"},
 ]
 
-USER_AGENT = "Mozilla/5.0 (OpenClaw-AI-Dashboard)"
-MIN_ARTICLES = 6
-LOOKBACK_HOURS = 36  # capture previous calendar day + buffer
+# ---------------------------------------------------------------------------
 
+def log(message: str) -> None:
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with LOG_FILE.open("a", encoding="utf-8") as fh:
+        fh.write(f"[{timestamp}] {message}\n")
+
+def http_get(url: str, timeout: int = 20) -> bytes:
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=timeout) as resp:
+        return resp.read()
+
+def strip_html(text: str) -> str:
+    text = unescape(text or "")
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+def node_text(element, tag: str) -> str:
+    value = element.findtext(tag)
+    if value:
+        return value.strip()
+    value = element.findtext(ATOM_NS + tag)
+    if value:
+        return value.strip()
+    return ""
+
+def translate_to_traditional(text: str) -> str:
+    if not text:
+        return ""
+    params = urlencode({
+        "client": "gtx",
+        "sl": "auto",
+        "tl": "zh-TW",
+        "dt": "t",
+        "q": text[:SUMMARY_LIMIT],
+    })
+    url = f"{TRANSLATE_ENDPOINT}?{params}"
+    try:
+        raw = http_get(url, timeout=15)
+        data = json.loads(raw.decode("utf-8"))
+        translated = "".join(segment[0] for segment in data[0])
+        return translated.strip()
+    except Exception as exc:
+        log(f"⚠️ 翻譯失敗（使用原文）：{exc}")
+        return text
 
 @dataclass
 class Article:
@@ -51,67 +93,36 @@ class Article:
 
     def to_markdown(self) -> str:
         date_str = self.published.strftime("%Y-%m-%d %H:%M %Z")
-        summary = self.summary or ""
         return (
-            f"- **[{self.title}]({self.link})**  "+
-            f"_{self.source} · {date_str}_  \n"
-            f"  {summary}"
+            f"- **[{self.title}]({self.link})**  _{self.source} · {date_str}_  \n"
+            f"  {self.summary}"
         )
 
     def to_html(self) -> str:
         date_str = self.published.strftime("%Y-%m-%d %H:%M %Z")
         return (
-            f"<li>"\
-            f"<strong><a href=\"{escape(self.link)}\" target=\"_blank\">{escape(self.title)}</a></strong>"\
-            f"<br><span class=\"source\">{escape(self.source)} · {date_str}</span>"\
-            f"<p>{escape(self.summary)}</p>"\
-            f"</li>"
+            "<li>"
+            f"<strong><a href=\"{escape(self.link)}\" target=\"_blank\">{escape(self.title)}</a></strong><br>"
+            f"<span class=\"source\">{escape(self.source)} · {date_str}</span>"
+            f"<p>{escape(self.summary)}</p>"
+            "</li>"
         )
 
+# ---------------------------------------------------------------------------
 
-def log(message: str) -> None:
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with LOG_FILE.open("a", encoding="utf-8") as fh:
-        fh.write(f"[{timestamp}] {message}\n")
-
-
-def fetch_feed(url: str) -> bytes:
-    req = Request(url, headers={"User-Agent": USER_AGENT})
-    with urlopen(req, timeout=20) as resp:
-        return resp.read()
-
-
-def strip_html(text: str) -> str:
-    text = unescape(text or "")
-    text = re.sub(r"<[^>]+>", " ", text)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
-
-
-def node_text(element, tag: str) -> str:
-    value = element.findtext(tag)
-    if value:
-        return value.strip()
-    value = element.findtext(ATOM_NS + tag)
-    if value:
-        return value.strip()
-    return ""
-
-
-def parse_rss(data: bytes, source: str) -> List[Article]:
+def parse_feed(data: bytes, source: str) -> List[Article]:
     import xml.etree.ElementTree as ET
 
     articles: List[Article] = []
     try:
         root = ET.fromstring(data)
     except ET.ParseError as exc:
-        log(f"❌ 解析 RSS 失敗 ({source}): {exc}")
+        log(f"❌ 無法解析 {source} RSS：{exc}")
         return articles
 
     items = root.findall(".//item")
     if not items:
-        items = root.findall(".//{http://www.w3.org/2005/Atom}entry")
+        items = root.findall(f".//{ATOM_NS}entry")
 
     for item in items:
         title = node_text(item, "title")
@@ -121,8 +132,9 @@ def parse_rss(data: bytes, source: str) -> List[Article]:
             if link_el is not None:
                 link = (link_el.get("href") or link_el.text or "").strip()
         pub_date_raw = node_text(item, "pubDate") or node_text(item, "updated")
-        summary = node_text(item, "description") or node_text(item, "summary")
-        summary = strip_html(summary)[:320]
+        summary_raw = node_text(item, "description") or node_text(item, "summary")
+        summary_clean = strip_html(summary_raw)[:SUMMARY_LIMIT]
+        summary = translate_to_traditional(summary_clean)
 
         if not title or not link:
             continue
@@ -139,75 +151,108 @@ def parse_rss(data: bytes, source: str) -> List[Article]:
         articles.append(Article(title=title, link=link, source=source, published=pub_dt, summary=summary))
     return articles
 
-
 def collect_news() -> List[Article]:
     cutoff = datetime.now(timezone.utc) - timedelta(hours=LOOKBACK_HOURS)
-    collected: List[Article] = []
+    aggregated: List[Article] = []
     for source in RSS_SOURCES:
         try:
-            raw = fetch_feed(source["url"])
-            items = parse_rss(raw, source["name"])
-            recent = [item for item in items if item.published >= cutoff]
+            data = http_get(source["url"])
+            parsed = parse_feed(data, source["name"])
+            recent = [a for a in parsed if a.published >= cutoff]
             if not recent:
-                # fallback to newest 2 items to avoid empty sections
-                recent = sorted(items, key=lambda i: i.published, reverse=True)[:2]
-            collected.extend(recent)
+                recent = sorted(parsed, key=lambda a: a.published, reverse=True)[:2]
+            aggregated.extend(recent)
             log(f"✅ {source['name']} 抓到 {len(recent)} 則")
         except Exception as exc:
-            log(f"❌ 無法抓取 {source['name']}: {exc}")
-    collected.sort(key=lambda a: a.published, reverse=True)
-    return collected
-
+            log(f"❌ 無法抓取 {source['name']}：{exc}")
+    aggregated.sort(key=lambda a: a.published, reverse=True)
+    return aggregated
 
 def split_sections(articles: List[Article]) -> Dict[str, List[Article]]:
     if not articles:
         return {"headlines": [], "industry": [], "highlights": []}
-    headlines = articles[:2]
-    industry = articles[2:6]
-    highlights = articles[6:8]
     return {
-        "headlines": headlines,
-        "industry": industry,
-        "highlights": highlights,
+        "headlines": articles[:2],
+        "industry": articles[2:6],
+        "highlights": articles[6:8],
     }
 
+# ---------------------------------------------------------------------------
 
 def load_rag() -> Dict[str, Any]:
-    if not RAG_DATA.exists():
+    if not RAG_DATA_FILE.exists():
         log("⚠️ 找不到 RAG 資料，略過該區塊")
         return {}
-    with RAG_DATA.open("r", encoding="utf-8") as fh:
+    with RAG_DATA_FILE.open("r", encoding="utf-8") as fh:
         return json.load(fh)
-
 
 def render_rag_markdown(rag: Dict[str, Any]) -> str:
     if not rag:
         return ""
-    lines = ["## 🤖 RAG 資訊", "", "### 📚 最新 AI Agent 論文", ""]
+    lines: List[str] = ["## 🤖 RAG 資訊", "", "### 📚 最新 AI Agent 論文", ""]
     for paper in rag.get("papers", [])[:3]:
         lines.append(f"- **[{paper['title']}]({paper['url']})**  ")
-        lines.append(f"  {paper.get('abstract','').strip()}")
+        lines.append(f"  {paper.get('abstract', '').strip()}")
         lines.append("")
     lines.append("### 💻 熱門開源專案\n")
     for project in rag.get("projects", [])[:4]:
         lines.append(f"- **[{project['name']}]({project['url']})**  ")
-        lines.append(f"  {project.get('description','').strip()}")
+        lines.append(f"  {project.get('description', '').strip()}")
         lines.append("")
     lines.append("### 🤗 Hugging Face 趨勢\n")
     for model in rag.get("models", [])[:2]:
         lines.append(f"- **[{model['name']}]({model['url']})**  ")
-        lines.append(f"  {model.get('description','').strip()}")
+        lines.append(f"  {model.get('description', '').strip()}")
         lines.append("")
     return "\n".join(lines).strip()
 
+def render_rag_html(rag: Dict[str, Any], today: str) -> str:
+    if not rag:
+        return ""
 
-def render_md(news_sections: Dict[str, List[Article]], rag: Dict[str, Any]) -> str:
+    def build(items: List[Dict[str, Any]], keys: tuple[str, str, str], limit: int) -> str:
+        html_items = []
+        for item in items[:limit]:
+            title = escape(str(item.get(keys[0], "")))
+            url = escape(str(item.get(keys[1], "")))
+            desc = escape(str(item.get(keys[2], "")))
+            html_items.append(f"<li><strong><a href=\"{url}\" target=\"_blank\">{title}</a></strong><p>{desc}</p></li>")
+        return "".join(html_items)
+
+    return f"""
+            <section class=\"dashboard-section\">
+                <h2>📚 AI Agent 研究 & RAG 資訊</h2>
+                <p class=\"date-subtitle\">更新：{today}</p>
+                <div class=\"news-card\">
+                    <h3>最新論文</h3>
+                    <ul>
+                        {build(rag.get('papers', []), ('title', 'url', 'abstract'), 3)}
+                    </ul>
+                </div>
+                <div class=\"news-card\">
+                    <h3>熱門開源專案</h3>
+                    <ul>
+                        {build(rag.get('projects', []), ('name', 'url', 'description'), 4)}
+                    </ul>
+                </div>
+                <div class=\"news-card\">
+                    <h3>Hugging Face 趨勢</h3>
+                    <ul>
+                        {build(rag.get('models', []), ('name', 'url', 'description'), 2)}
+                    </ul>
+                </div>
+            </section>
+        """
+
+# ---------------------------------------------------------------------------
+
+def render_markdown(sections: Dict[str, List[Article]], rag: Dict[str, Any]) -> str:
     now = datetime.now()
     today = now.strftime("%Y-%m-%d")
     yesterday = (now - timedelta(days=1)).strftime("%Y-%m-%d")
     updated = now.strftime("%Y-%m-%d %H:%M")
 
-    lines = [
+    parts: List[str] = [
         "# 🤖 AI 每日儀表板",
         "",
         f"## 📅 {today}",
@@ -222,41 +267,32 @@ def render_md(news_sections: Dict[str, List[Article]], rag: Dict[str, Any]) -> s
         "",
     ]
 
-    headlines = news_sections.get("headlines", [])
-    if headlines:
-        lines.extend(a.to_markdown() for a in headlines)
-    else:
-        lines.append("_（暫無資料）_")
-    lines.append("")
+    headlines = sections.get("headlines", [])
+    parts.extend(a.to_markdown() for a in headlines) if headlines else parts.append("_（暫無資料）_")
+    parts.append("")
 
-    lines.append("## 💼 產業動態\n")
-    industry = news_sections.get("industry", [])
-    if industry:
-        lines.extend(a.to_markdown() for a in industry)
-    else:
-        lines.append("_（暫無資料）_")
-    lines.append("")
+    parts.append("## 💼 產業動態\n")
+    industry = sections.get("industry", [])
+    parts.extend(a.to_markdown() for a in industry) if industry else parts.append("_（暫無資料）_")
+    parts.append("")
 
-    lines.append("## 🧠 深度觀點\n")
-    highlights = news_sections.get("highlights", [])
-    if highlights:
-        lines.extend(a.to_markdown() for a in highlights)
-    else:
-        lines.append("_（暫無資料）_")
-    lines.append("")
+    parts.append("## 🧠 深度觀點\n")
+    highlights = sections.get("highlights", [])
+    parts.extend(a.to_markdown() for a in highlights) if highlights else parts.append("_（暫無資料）_")
+    parts.append("")
 
     rag_block = render_rag_markdown(rag)
     if rag_block:
-        lines.append(rag_block)
-        lines.append("")
+        parts.append(rag_block)
+        parts.append("")
 
-    lines.extend([
+    parts.extend([
         "---",
         "",
         "## ⚙️ 設定狀態",
         "",
         "- ✅ 儀表板自動生成",
-        "- ✅ RSS + RAG 資料整合",
+        "- ✅ 多來源 RSS + RAG 資料整合",
         f"- 📍 位置：`{DASHBOARD_MD}`",
         "",
         "## 🔄 更新 schedule",
@@ -269,62 +305,21 @@ def render_md(news_sections: Dict[str, List[Article]], rag: Dict[str, Any]) -> s
         "*由小管家 🤖 自動生成*",
     ])
 
-    return "\n".join(lines)
+    return "\n".join(parts)
 
-
-def render_html(news_sections: Dict[str, List[Article]], rag: Dict[str, Any]) -> str:
+def render_html(sections: Dict[str, List[Article]], rag: Dict[str, Any]) -> str:
     now = datetime.now()
     today = now.strftime("%Y-%m-%d")
     updated = now.strftime("%Y-%m-%d %H:%M")
 
     def render_list(items: List[Article]) -> str:
         if not items:
-            return "<p class=\"empty\">目前沒有資料</p>"
-        return "<ul>" + "".join(a.to_html() for a in items) + "</ul>"
+            return '<p class="empty">目前沒有資料</p>'
+        return "<ul>" + "".join(article.to_html() for article in items) + "</ul>"
 
-    rag_section = ""
-    if rag:
-        papers = rag.get("papers", [])
-        projects = rag.get("projects", [])
-        models = rag.get("models", [])
+    rag_section = render_rag_html(rag, today)
 
-        def build_list(items, title_key, url_key, desc_key):
-            html_items = []
-            for item in items:
-                title = escape(str(item.get(title_key, "")))
-                url = escape(str(item.get(url_key, "")))
-                desc = escape(str(item.get(desc_key, "")))
-                html_items.append(
-                    f"<li><strong><a href=\"{url}\" target=\"_blank\">{title}</a></strong><p>{desc}</p></li>"
-                )
-            return "".join(html_items)
-
-        rag_section = f"""
-            <section class=\"dashboard-section\">
-                <h2>📚 AI Agent 研究 & RAG 資訊</h2>
-                <p class=\"date-subtitle\">更新：{today}</p>
-                <div class=\"news-card\">
-                    <h3>最新論文</h3>
-                    <ul>
-                        {build_list(papers[:3], 'title', 'url', 'abstract')}
-                    </ul>
-                </div>
-                <div class=\"news-card\">
-                    <h3>熱門開源專案</h3>
-                    <ul>
-                        {build_list(projects[:4], 'name', 'url', 'description')}
-                    </ul>
-                </div>
-                <div class=\"news-card\">
-                    <h3>Hugging Face 趨勢</h3>
-                    <ul>
-                        {build_list(models[:2], 'name', 'url', 'description')}
-                    </ul>
-                </div>
-            </section>
-        """
-
-    html = f"""<!DOCTYPE html>
+    return f"""<!DOCTYPE html>
 <html lang=\"zh-TW\">
 <head>
     <meta charset=\"UTF-8\">
@@ -346,15 +341,15 @@ def render_html(news_sections: Dict[str, List[Article]], rag: Dict[str, Any]) ->
                 <p class=\"date-subtitle\">昨日 AI 大事件</p>
                 <div class=\"news-card\">
                     <h3>🔥 頭條新聞</h3>
-                    {render_list(news_sections.get('headlines', []))}
+                    {render_list(sections.get('headlines', []))}
                 </div>
                 <div class=\"news-card\">
                     <h3>💼 產業動態</h3>
-                    {render_list(news_sections.get('industry', []))}
+                    {render_list(sections.get('industry', []))}
                 </div>
                 <div class=\"news-card\">
                     <h3>🧠 深度觀點</h3>
-                    {render_list(news_sections.get('highlights', []))}
+                    {render_list(sections.get('highlights', []))}
                 </div>
             </section>
             {rag_section}
@@ -374,8 +369,8 @@ def render_html(news_sections: Dict[str, List[Article]], rag: Dict[str, Any]) ->
 </body>
 </html>
 """
-    return html
 
+# ---------------------------------------------------------------------------
 
 def main() -> None:
     log("▶️ 開始生成儀表板")
@@ -385,12 +380,10 @@ def main() -> None:
     sections = split_sections(articles)
     rag = load_rag()
 
-    dashboard_markdown = render_md(sections, rag)
-    DASHBOARD_MD.write_text(dashboard_markdown, encoding="utf-8")
+    DASHBOARD_MD.write_text(render_markdown(sections, rag), encoding="utf-8")
     log("📝 已寫入 DASHBOARD.md")
 
-    dashboard_html = render_html(sections, rag)
-    DASHBOARD_HTML.write_text(dashboard_html, encoding="utf-8")
+    DASHBOARD_HTML.write_text(render_html(sections, rag), encoding="utf-8")
     log("🕸️ 已寫入 index.html")
 
     log("✅ 儀表板更新完成")

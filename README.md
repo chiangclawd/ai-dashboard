@@ -5,23 +5,24 @@
 
 ## 🔄 自動更新
 - **頻率：** 每天早上 8:00（cron）
-- **內容：** RSS AI 新聞 + RAG (arXiv / GitHub / Hugging Face) 摘要
-- **方式：** `update_dashboard.sh` 執行 `generate_dashboard.py` 自動產出 Markdown 與 HTML
+- **內容：** 多來源 AI 新聞 RSS（The Verge、TechCrunch、MIT Technology Review、Ars Technica、AI Trends）+ RAG (arXiv / GitHub / Hugging Face)
+- **語言：** 自動翻譯為繁體中文（使用 `googletrans`）
+- **流程：** `update_dashboard.sh` → `generate_dashboard.py`
 
 ## 📂 文件結構
 ```
 ai-dashboard/
 ├── DASHBOARD.md              # 主儀表板（Markdown）
 ├── index.html                # 發佈用 HTML 儀表板
-├── generate_dashboard.py     # Python 產生器：抓 RSS、整合 RAG
-├── update_dashboard.sh       # Shell 包裝腳本（提供日誌、錯誤處理）
+├── generate_dashboard.py     # Python 產生器：抓 RSS、翻譯、整合 RAG
+├── update_dashboard.sh       # Shell 包裝腳本（pip 依賴 + 日誌控管）
 ├── rag_data/rag_data.json    # RAG 資料來源
-├── rag_system/               # Cron / RAG utilities
+├── rag_system/               # Cron / RAG wrapper
 └── README.md
 ```
 
 ## 🎯 儀表板內容
-- 🔥 頭條新聞（The Verge / TechCrunch RSS）
+- 🔥 頭條新聞（自動翻譯成繁體中文摘要）
 - 💼 產業動態
 - 🧠 深度觀點
 - 🤖 RAG 區塊（論文、開源專案、Hugging Face 趨勢）
@@ -54,8 +55,8 @@ Cron log：`/home/ubuntu/.openclaw/workspace/ai-dashboard/cron.log`
 
 ## 🛠️ Troubleshooting
 1. `update_dashboard.sh` exit code ≠ 0：查閱 `update.log`
-2. 若 RSS 抓取失敗，腳本會落回最近文章，並在日誌記錄。
-3. 若 RAG 檔案缺失，僅跳過該區塊，不影響新聞更新。
+2. 若 RSS 抓取失敗，腳本會記錄並改用最近文章。
+3. 若翻譯套件無法載入，摘要會暫時以原文呈現並在日誌中提示。
 
 ---
 *由小管家 🤖 維護*

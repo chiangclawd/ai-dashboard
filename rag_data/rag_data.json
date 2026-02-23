@@ -3,7 +3,7 @@
     {
       "title": "AI Agent Systems: Architectures, Applications, and Evaluation",
       "authors": ["Bin Xu"],
-      "abstract": "Comprehensive survey of AI agent systems covering architectures, applications, and evaluation methodologies. Published in January 2026.",
+      "abstract": "全面梳理 AI Agent 系統的整體架構、應用場景與評估方法論，2026 年 1 月發表的權威綜述。",
       "url": "https://arxiv.org/abs/2601.01743",
       "published_date": "2026-01-05",
       "categories": ["cs.AI", "cs.LG"],
@@ -12,7 +12,7 @@
     {
       "title": "AI Agents: Evolution, Architecture, and Real-World Applications",
       "authors": ["Multiple Authors"],
-      "abstract": "Examines the evolution, architecture, and practical applications of AI agents from early rule-based systems to modern sophisticated systems integrating large language models with dedicated modules for perception, planning, and tool use.",
+      "abstract": "解析 AI Agent 從早期規則式系統一路演進到結合大型語言模型、具備感知／規劃／工具使用模組的現代架構，並補充實務落地案例。",
       "url": "https://arxiv.org/abs/2503.12687",
       "published_date": "2025-03-16",
       "categories": ["cs.AI", "cs.LG"],
@@ -21,7 +21,7 @@
     {
       "title": "Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions",
       "authors": ["Mohamad Abou Ali", "Other Authors"],
-      "abstract": "Systematic PRISMA-based literature review of 90 studies, categorizing them using a dual-paradigm framework to trace research trends and evaluate architectures by their appropriate standards.",
+      "abstract": "以 PRISMA 方法系統回顧 90 篇研究，透過雙重範式框架追蹤 Agentic AI 的研究趨勢並評估不同架構的適用性。",
       "url": "https://arxiv.org/abs/2510.25445",
       "published_date": "2025-10-29",
       "categories": ["cs.AI", "cs.LG"],
@@ -31,7 +31,7 @@
   "projects": [
     {
       "name": "crewAI",
-      "description": "Framework for orchestrating role-playing, autonomous AI agents. Lean, lightning-fast Python framework built entirely from scratch, completely independent of LangChain or other agent frameworks.",
+      "description": "專為角色扮演式自主代理打造的輕量級 Python 框架，自行開發、不依賴 LangChain，強調高效協作。",
       "url": "https://github.com/crewAIInc/crewAI",
       "stars": "High",
       "language": "Python",
@@ -40,7 +40,7 @@
     },
     {
       "name": "awesome-ai-agents",
-      "description": "A curated list of AI autonomous agents with multi-framework support and unified programming interface.",
+      "description": "整理多框架支援的 AI Agent 精選清單，提供統一介面與豐富案例，方便快速比較。",
       "url": "https://github.com/e2b-dev/awesome-ai-agents",
       "stars": "Medium",
       "language": "Multiple",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Microsoft Agent Framework",
-      "description": "Framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.",
+      "description": "微軟推出的 AI Agent 工具鏈，支援 Python 與 .NET，可建構、協調到部署多 Agent 工作流程。",
       "url": "https://github.com/microsoft/agent-framework",
       "stars": "High",
       "language": "Python, .NET",
@@ -58,7 +58,7 @@
     },
     {
       "name": "VoltAgent",
-      "description": "AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework.",
+      "description": "以 TypeScript 為核心的 AI Agent 工程平台，開源框架 + 插件化設計，便於擴充企業場景。",
       "url": "https://github.com/VoltAgent/voltagent",
       "stars": "Growing",
       "language": "TypeScript",
@@ -69,7 +69,7 @@
   "models": [
     {
       "name": "Reflective Agents Trend",
-      "description": "By 2026, robust agent toolkits where adding a new skill to your AI (e.g., 'connect to Salesforce') is as simple as installing a plugin. The agent can discover it and start using it securely and effectively.",
+      "description": "2026 年的反思型 Agent 工具鏈，新增技能就像安裝插件一樣簡單，代理可自行發現並安全運用。",
       "url": "https://huggingface.co/blog/aufklarer/ai-trends-2026-test-time-reasoning-reflective-agen",
       "downloads": "Trending",
       "likes": "High",
@@ -78,7 +78,7 @@
     },
     {
       "name": "Hugging Face AI Agents Course",
-      "description": "Official course for learning how to build and deploy AI agents using Hugging Face tools and infrastructure.",
+      "description": "Hugging Face 官方推出的 AI Agent 線上課程，教你使用其工具與基礎設施建構並部署代理。",
       "url": "https://huggingface.co/learn/agents-course/en/unit0/introduction",
       "downloads": "Educational",
       "likes": "Learning Resource",
@@ -86,5 +86,5 @@
       "source": "Hugging Face"
     }
   ],
-  "last_updated": "2026-02-22T13:00:00Z"
+  "last_updated": "2026-02-23T06:59:00Z"
 }

@@ -1,159 +1,85 @@
-## 📅 2026-02-22
+# 🤖 AI 每日儀表板
 
-### 📰 昨日 AI 大事件 (2026-02-21)
+## 📅 2026-02-23
 
-_最後更新：2026-02-22 10:35_
+### 📰 昨日 AI 大事件 (2026-02-22)
 
----
-
-## 🔥 頭條新聞
-
-### OpenAI 安全事件引發爭議
-- **來源**：The Verge
-- **摘要**：有貼文引發安全警報，但 OpenAI 拒絕向執法部門通報，引發對 AI 平台責任的討論。
-
-### ChatGPT 開始顯示付費廣告
-- **來源**：The Verge  
-- **摘要**：Expedia、Qualcomm、Best Buy 和 Enterprise Mobility 等品牌已開始在 ChatGPT 回應中投放廣告，標誌著 AI 商業化的新階段。
-
-## 💼 產業動態
-
-### Nvidia 與 OpenAI 接近達成重大投資協議
-- **來源**：The Verge
-- **摘要**：兩家 AI 巨頭可能正在談判新的重大投資合作，將進一步整合硬體與軟體生態系。
-
-### Google 發布 Gemini 3.1 Pro
-- **來源**：The Verge
-- **摘要**：新版本強調「核心推理能力」的提升，專為需要複雜解答的任務設計，適用於數據合成、創意項目等高階應用。
-
-## 🧠 深度觀點
-
-### 「如果你對 AI 在工作場所的最佳想法只是用伺服器機架取代百名人類，那你就不配稱自己為技術樂觀主義者」
-- **來源**：The Verge 引用
-- **摘要**：對 AI 應用的深度反思，強調真正的技術創新應該超越簡單的自動化替代。
-
----
-
-## 📅 2026-02-21
-
-### 📰 前日 AI 大事件 (2026-02-20)
-
-_最後更新：2026-02-21 23:09_
+_最後更新：2026-02-23 06:27_
 
 ---
 
 ## 🔥 頭條新聞
 
-### Netflix 訴訟 ByteDance AI 盜用版權
-- **來源**：The Verge
-- **摘要**：Netflix 向 TikTok 母公司 ByteDance 發出三天最後通牒，要求停止 Seedance AI 盜用 Stranger Things、Squid Game 等知名 IP，否則將面臨「立即訴訟」。
-
-### xAI 面臨環境訴訟
-- **來源**：The Verge  
-- **摘要**：NAACP 向 Musk 的 xAI 公司發出訴訟通知，指控其在密西西比州非法安裝燃氣渦輪機為 Colossus 2 數據中心供電，無許可證運行十幾台渦輪機。
+- **[It&#8217;s MAGA v Broligarch in the battle over prediction markets](https://www.theverge.com/policy/881139/broligarch-prediction-markets)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  Hello and welcome to Regulator, a newsletter for Verge subscribers about the love-hate (but mostly hate) relationship between Silicon Valley and Washington. I hope everyone got to celebrate George Washington's birthday in their preferred manner: skiing, staycationing, subscribing to The Verge if you haven't already, et
+- **[Money no longer matters to AI’s top talent](https://www.theverge.com/podcast/880778/ai-talent-war-hiring-frenzy-openai-anthropic-ipo)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  Today on Decoder we’re going to talk about the war for AI talent. Right now, the hottest job market on the planet is for AI researchers. The vast majority of these people are concentrated into a small number of hugely valuable, extremely fast-growing companies in the San Francisco Bay Area. Nowadays, such companies are
 
 ## 💼 產業動態
 
-### Xbox 高層大改組，AI 專家接任 CEO
-- **來源**：The Verge
-- **摘要**：Asha Sharma 接替 Phil Spencer 成為 Microsoft Gaming CEO，她之前在 Microsoft 負責 AI 相關工作，承諾不會讓遊戲生態系充斥「無靈魂的 AI 垃圾」。
-
-### Anthropic 發布 Sonnet 4.6
-- **來源**：The Verge
-- **摘要**：Anthropic 推出 Claude Sonnet 4.6，聲稱「接近 Opus 級別的智慧」，在編碼和電腦使用方面有顯著改進，現已成為免費和 Pro 用戶的預設模型。
+- **[The speech police came for Colbert](https://www.theverge.com/podcast/881222/fcc-colbert-talarico-brendan-carr-vergecast)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  Generally speaking, arcane and mostly unenforced FCC rules are not the province of late night talk shows. FCC Commissioner Brendan Carr seems intent on changing that, though; not long after causing a ruckus that briefly took Jimmy Kimmel off the air, his vague threats appear to have been enough to convince CBS to tell 
+- **[The AI security nightmare is here and it looks suspiciously like lobster](https://www.theverge.com/ai-artificial-intelligence/881574/cline-openclaw-prompt-injection-hack)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  A hacker tricked a popular AI coding tool into installing OpenClaw - the viral, open-source AI agent OpenClaw that "actually does things" - absolutely everywhere. Funny as a stunt, but a sign of what to come as more and more people let autonomous software use their computers on their behalf. The hacker took advantage o
+- **[The Pitt has a sharp take on AI](https://www.theverge.com/entertainment/881016/hbo-the-pitt-generative-ai-charting)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  Each episode of HBO's The Pitt features some degree of medical trauma that almost makes the hospital drama feel like a horror series. Some patients are dealing with gnarly lacerations while others are fighting off vicious blood infections that could rob them of their limbs, and the chaos of working in an emergency room
+- **[OpenAI&#8217;s first ChatGPT gadget could be a smart speaker with a camera](https://www.theverge.com/ai-artificial-intelligence/882077/openai-chatgpt-smart-speaker-camera-glasses-lamp)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  OpenAI's first hardware release will be a smart speaker with a camera that will probably cost between $200 and $300, according to The Information. The device will be able to recognize things like "items on a nearby table or conversations people are having in the vicinity," The Information says, and it will have a Face 
 
 ## 🧠 深度觀點
 
-### 「如果 AI 在工作場所的最佳想法只是用伺服器機架取代百名人類，那你就不配稱自己為技術樂觀主義者」
-- **來源**：The Verge 引用
-- **摘要**：對 AI 應用的深度反思，強調真正的技術創新應該超越簡單的自動化替代。
-
----
-
-## ⚙️ 設定狀態
-
-- ✅ 儀表板已創建並有實際內容
-- ✅ 定時任務已設定（每天 8:00）
-- 📍 位置：`/home/ubuntu/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
-- 🔧 數據來源：直接抓取 AI 新聞網站（The Verge）
-
-## 🔄 更新 schedule
-
-- **頻率**：每天上午 8:00
-- **涵蓋**：前一天（24 小時內）的 AI 相關新聞
-- **來源**：多個 AI 新聞網站聚合
-
----
-
-## 📝 備註
-
-- 本儀表板由小管家 🤖 自動維護
-- 如需手動更新，請說：「更新 AI 儀表板」
-- 可自訂關注的 AI 領域（LLM、機器人、電腦視覺等）
-
----
+- **[Amazon blames human employees for an AI coding agent&#8217;s mistake](https://www.theverge.com/ai-artificial-intelligence/882005/amazon-blames-human-employees-for-an-ai-coding-agents-mistake)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  Amazon Web Services suffered a 13-hour outage to one system in December as a result of its AI coding assistant Kiro's actions, according to the Financial Times. Numerous unnamed Amazon employees told the FT that AI agent Kiro was responsible for the December incident affecting an AWS service in parts of mainland China.
+- **[Trump is making coal plants even dirtier as AI demands more energy](https://www.theverge.com/science/882288/trump-ai-data-center-power-plant-pollution-mercury-mats)**  _The Verge · AI · 2026-02-23 06:27 UTC_  
+  The Trump administration just tossed out Biden-era restrictions on mercury and other toxic pollutants from power plants. It's repealing Mercury and Air Toxics Standards (MATS) just as electricity demand in the US ticks up with the buildout of new AI data centers. Those standards are particularly impactful when it comes
 
 ## 🤖 RAG 資訊
 
 ### 📚 最新 AI Agent 論文
 
 - **[AI Agent Systems: Architectures, Applications, and Evaluation](https://arxiv.org/abs/2601.01743)**  
-  Comprehensive survey published in January 2026 covering AI agent architectures and evaluation methods.
+  Comprehensive survey of AI agent systems covering architectures, applications, and evaluation methodologies. Published in January 2026.
 
 - **[AI Agents: Evolution, Architecture, and Real-World Applications](https://arxiv.org/abs/2503.12687)**  
-  Examines the evolution from rule-based to modern LLM-integrated agent systems.
+  Examines the evolution, architecture, and practical applications of AI agents from early rule-based systems to modern sophisticated systems integrating large language models with dedicated modules for perception, planning, and tool use.
 
-- **[Agentic AI: A Comprehensive Survey](https://arxiv.org/abs/2510.25445)**  
-  Systematic review of 90 studies with dual-paradigm framework for categorizing agent architectures.
+- **[Agentic AI: A Comprehensive Survey of Architectures, Applications, and Future Directions](https://arxiv.org/abs/2510.25445)**  
+  Systematic PRISMA-based literature review of 90 studies, categorizing them using a dual-paradigm framework to trace research trends and evaluate architectures by their appropriate standards.
 
 ### 💻 熱門開源專案
 
 - **[crewAI](https://github.com/crewAIInc/crewAI)**  
-  Lean Python framework for orchestrating role-playing autonomous AI agents.
-
-- **[Microsoft Agent Framework](https://github.com/microsoft/agent-framework)**  
-  Official Microsoft framework supporting Python and .NET for multi-agent workflows.
-
-- **[VoltAgent](https://github.com/VoltAgent/voltagent)**  
-  TypeScript-based AI Agent Engineering Platform with plugin architecture.
+  Framework for orchestrating role-playing, autonomous AI agents. Lean, lightning-fast Python framework built entirely from scratch, completely independent of LangChain or other agent frameworks.
 
 - **[awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents)**  
-  Curated list of autonomous AI agents with multi-framework support.
+  A curated list of AI autonomous agents with multi-framework support and unified programming interface.
+
+- **[Microsoft Agent Framework](https://github.com/microsoft/agent-framework)**  
+  Framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.
+
+- **[VoltAgent](https://github.com/VoltAgent/voltagent)**  
+  AI Agent Engineering Platform built on an Open Source TypeScript AI Agent Framework.
 
 ### 🤗 Hugging Face 趨勢
 
-- **[Reflective Agents Trend 2026](https://huggingface.co/blog/aufklarer/ai-trends-2026-test-time-reasoning-reflective-agen)**  
-  Robust agent toolkits enabling simple plugin-based skill addition.
+- **[Reflective Agents Trend](https://huggingface.co/blog/aufklarer/ai-trends-2026-test-time-reasoning-reflective-agen)**  
+  By 2026, robust agent toolkits where adding a new skill to your AI (e.g., 'connect to Salesforce') is as simple as installing a plugin. The agent can discover it and start using it securely and effectively.
 
 - **[Hugging Face AI Agents Course](https://huggingface.co/learn/agents-course/en/unit0/introduction)**  
-  Official learning resource for building AI agents with Hugging Face tools.
-
-
+  Official course for learning how to build and deploy AI agents using Hugging Face tools and infrastructure.
 
 ---
 
 ## ⚙️ 設定狀態
 
-- ✅ 儀表板已創建並有實際內容
-- ✅ RAG 系統已整合
-- ✅ 定時任務已設定（每天 8:00）
+- ✅ 儀表板自動生成
+- ✅ RSS + RAG 資料整合
 - 📍 位置：`/home/ubuntu/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
-- 📊 RAG 資料來源：arXiv, GitHub, Hugging Face
 
 ## 🔄 更新 schedule
 
 - **頻率**：每天上午 8:00
-- **涵蓋**：前一天（24 小時內）的 AI 相關新聞 + 最新 AI Agent 論文/專案
-- **來源**：多個 AI 新聞網站 + 學術論文 + 開源專案 + 模型平台
-
----
-
-## 📝 備註
-
-- 本儀表板由小管家 🤖 自動維護
-- RAG 資訊每日自動更新，提供最新 AI Agent 架構研究
-- 如需手動更新，請說：「更新 AI 儀表板」
-- 可自訂關注的 AI 領域（LLM、機器人、電腦視覺等）
+- **涵蓋**：前 24~36 小時 AI 新聞 + RAG 資訊
 
 ---
 

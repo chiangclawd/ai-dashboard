@@ -2,7 +2,7 @@
 # AI Dashboard Update with RAG Integration
 # 整合 RAG 資料到儀表板
 
-WORKSPACE="/home/clawd/.openclaw/workspace"
+WORKSPACE="/home/ubuntu/.openclaw/workspace"
 DASHBOARD_DIR="$WORKSPACE/ai-dashboard"
 RAG_DATA_DIR="$DASHBOARD_DIR/rag_data"
 DASHBOARD_FILE="$DASHBOARD_DIR/DASHBOARD.md"

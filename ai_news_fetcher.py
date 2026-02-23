@@ -95,7 +95,7 @@ _（待更新）_
     return dashboard
 
 def main():
-    workspace = "/home/clawd/.openclaw/workspace/ai-dashboard"
+    workspace = "/home/ubuntu/.openclaw/workspace/ai-dashboard"
     dashboard_file = f"{workspace}/DASHBOARD.md"
     
     # 生成儀表板

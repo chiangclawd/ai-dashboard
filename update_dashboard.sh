@@ -2,7 +2,7 @@
 # AI Dashboard Daily Update Script
 # 每天執行，更新 AI 新聞儀表板
 
-WORKSPACE="/home/clawd/.openclaw/workspace"
+WORKSPACE="/home/ubuntu/.openclaw/workspace"
 DASHBOARD_FILE="$WORKSPACE/ai-dashboard/DASHBOARD.md"
 LOG_FILE="$WORKSPACE/ai-dashboard/update.log"
 

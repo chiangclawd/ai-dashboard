@@ -1,7 +1,7 @@
 #!/bin/bash
 # Setup cron job for daily AI Dashboard update with RAG
 
-WORKSPACE="/home/clawd/.openclaw/workspace"
+WORKSPACE="/home/ubuntu/.openclaw/workspace"
 SCRIPT_PATH="$WORKSPACE/ai-dashboard/rag_system/update_dashboard_with_rag.sh"
 CRON_LOG="$WORKSPACE/ai-dashboard/cron.log"
 

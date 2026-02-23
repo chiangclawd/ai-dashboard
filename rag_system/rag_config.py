@@ -9,7 +9,7 @@ import json
 from datetime import datetime, timedelta
 
 # 設定檔路徑
-WORKSPACE = "/home/clawd/.openclaw/workspace"
+WORKSPACE = "/home/ubuntu/.openclaw/workspace"
 AI_DASHBOARD_DIR = os.path.join(WORKSPACE, "ai-dashboard")
 RAG_DATA_DIR = os.path.join(AI_DASHBOARD_DIR, "rag_data")
 MEMORY_DIR = os.path.join(WORKSPACE, "memory")

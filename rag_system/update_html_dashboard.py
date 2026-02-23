@@ -8,7 +8,7 @@ import datetime
 import re
 
 # 路徑設定
-WORKSPACE = "/home/clawd/.openclaw/workspace"
+WORKSPACE = "/home/ubuntu/.openclaw/workspace"
 DASHBOARD_DIR = f"{WORKSPACE}/ai-dashboard"
 RAG_DATA_FILE = f"{DASHBOARD_DIR}/rag_data/rag_data.json"
 HTML_FILE = f"{DASHBOARD_DIR}/index.html"

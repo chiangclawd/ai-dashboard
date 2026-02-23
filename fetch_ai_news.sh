@@ -2,7 +2,7 @@
 # AI Daily Dashboard - News Fetcher
 # 每天自動抓取 AI 相關新聞並更新儀表板
 
-WORKSPACE="/home/clawd/.openclaw/workspace"
+WORKSPACE="/home/ubuntu/.openclaw/workspace"
 DASHBOARD_DIR="$WORKSPACE/ai-dashboard"
 NEWS_FILE="$DASHBOARD_DIR/daily_news.md"
 DATE=$(date +"%Y-%m-%d")

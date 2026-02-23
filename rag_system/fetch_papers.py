@@ -10,7 +10,7 @@ import sys
 import os
 
 # 設定路徑
-WORKSPACE = "/home/clawd/.openclaw/workspace"
+WORKSPACE = "/home/ubuntu/.openclaw/workspace"
 RAG_SYSTEM_DIR = os.path.join(WORKSPACE, "ai-dashboard", "rag_system")
 sys.path.append(RAG_SYSTEM_DIR)
 

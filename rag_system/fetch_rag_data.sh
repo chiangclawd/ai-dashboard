@@ -2,7 +2,7 @@
 # RAG Data Fetcher for AI Dashboard
 # 使用 OpenClaw 內建工具抓取資料
 
-WORKSPACE="/home/clawd/.openclaw/workspace"
+WORKSPACE="/home/ubuntu/.openclaw/workspace"
 RAG_DATA_DIR="$WORKSPACE/ai-dashboard/rag_data"
 LOG_FILE="$WORKSPACE/ai-dashboard/update.log"
 

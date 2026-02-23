@@ -1,7 +1,7 @@
 # 🤖 AI 每日儀表板
 
 ## 📍 位置
-`/home/clawd/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
+`/home/ubuntu/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
 
 ## 🔄 自動更新
 - **頻率：** 每天早上 8:00

@@ -74,7 +74,7 @@ _最後更新：2026-02-21 23:09_
 
 - ✅ 儀表板已創建並有實際內容
 - ✅ 定時任務已設定（每天 8:00）
-- 📍 位置：`/home/clawd/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
+- 📍 位置：`/home/ubuntu/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
 - 🔧 數據來源：直接抓取 AI 新聞網站（The Verge）
 
 ## 🔄 更新 schedule
@@ -137,7 +137,7 @@ _最後更新：2026-02-21 23:09_
 - ✅ 儀表板已創建並有實際內容
 - ✅ RAG 系統已整合
 - ✅ 定時任務已設定（每天 8:00）
-- 📍 位置：`/home/clawd/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
+- 📍 位置：`/home/ubuntu/.openclaw/workspace/ai-dashboard/DASHBOARD.md`
 - 📊 RAG 資料來源：arXiv, GitHub, Hugging Face
 
 ## 🔄 更新 schedule

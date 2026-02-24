@@ -1,10 +1,10 @@
 # AI 儀表板時間軸
 
 ## 2026-02-24
-- 🕒 更新時間：2026-02-24 01:04
-- 🔥 頭條：The AI security nightmare is here and it looks suspiciously like lobster / The Pitt has a sharp take on AI
-- 💼 產業：OpenAI&#8217;s first ChatGPT gadget could be a smart speaker with a camera / Amazon blames human employees for an AI coding agent&#8217;s mistake
-- 🧠 深度：Samsung is adding Perplexity to Galaxy AI / How many AIs does it take to read a PDF?
+- 🕒 更新時間：2026-02-24 09:43
+- 🔥 頭條：Canva acquires startups working on animation and marketing / A Meta AI security researcher said an OpenClaw agent ran amok on her inbox
+- 💼 產業：With AI, investor loyalty is (almost) dead: At least a dozen OpenAI VCs now also back Anthropic / Anthropic accuses Chinese AI labs of mining Claude as US debates AI chip exports
+- 🧠 深度：Guide Labs debuts a new kind of interpretable LLM / The human work behind humanoid robots is being hidden
 - 📄 [完整內容](history/2026-02-24.md)
 
 ## 2026-02-23

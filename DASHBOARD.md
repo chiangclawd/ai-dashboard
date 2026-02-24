@@ -4,34 +4,34 @@
 
 ### 📰 昨日 AI 大事件 (2026-02-23)
 
-_最後更新：2026-02-24 01:04_
+_最後更新：2026-02-24 09:43_
 
 ---
 
 ## 🔥 頭條新聞
 
-- **[The AI security nightmare is here and it looks suspiciously like lobster](https://www.theverge.com/ai-artificial-intelligence/881574/cline-openclaw-prompt-injection-hack)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  一名駭客欺騙了一種流行的人工智慧編碼工具來安裝 OpenClaw——一種病毒式的開源人工智慧代理 OpenClaw，它「實際上可以做事」——幾乎無所不在。作為一個噱頭很有趣，但這表明隨著越來越多的人讓自主軟體代表他們使用他們的計算機，將會發生什麼。駭客利用了 [...]
-- **[The Pitt has a sharp take on AI](https://www.theverge.com/entertainment/881016/hbo-the-pitt-generative-ai-charting)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  HBO 的《皮特》的每一集都有一定程度的醫療創傷，幾乎讓這部醫院劇感覺像是一部恐怖連續劇。有些患者正在處理粗糙的撕裂傷，而另一些患者正在與可能奪走他們四肢的惡性血液感染作鬥爭，而在急診室工作的混亂經常[...]
+- **[Canva acquires startups working on animation and marketing](https://techcrunch.com/2026/02/23/canva-acquires-startups-working-on-animation-and-marketing/)**  _TechCrunch · Artificial Intelligence · 2026-02-24 07:39 UTC_  
+  透過新的收購，該公司希望透過潛在地增加影片創作和更精細的測量來鞏固其作為行銷解決方案的地位。
+- **[A Meta AI security researcher said an OpenClaw agent ran amok on her inbox](https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/)**  _TechCrunch · Artificial Intelligence · 2026-02-24 00:57 UTC_  
+  一位人工智慧安全研究人員發布的病毒式 X 貼文讀起來就像諷刺劇。但這實際上是對將任務交給人工智慧代理時可能出現問題的警告。
 
 ## 💼 產業動態
 
-- **[OpenAI&#8217;s first ChatGPT gadget could be a smart speaker with a camera](https://www.theverge.com/ai-artificial-intelligence/882077/openai-chatgpt-smart-speaker-camera-glasses-lamp)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  根據 The Information 報導，OpenAI 的第一個硬體版本將是一款帶有相機的智慧揚聲器，售價可能在 200 至 300 美元之間。該訊息稱，該設備將能夠識別「附近桌子上的物品或人們在附近進行的對話」之類的東西，並且它將有一張臉 […]
-- **[Amazon blames human employees for an AI coding agent&#8217;s mistake](https://www.theverge.com/ai-artificial-intelligence/882005/amazon-blames-human-employees-for-an-ai-coding-agents-mistake)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  根據《金融時報》報道，去年 12 月，由於人工智慧編碼助手 Kiro 的行為，亞馬遜網路服務的一個系統出現了 13 小時的中斷。多位不願透露姓名的亞馬遜員工告訴英國《金融時報》，人工智慧代理 Kiro 對 12 月影響中國大陸部分地區 AWS 服務的事件負有責任。熟悉的人[…]
-- **[Trump is making coal plants even dirtier as AI demands more energy](https://www.theverge.com/science/882288/trump-ai-data-center-power-plant-pollution-mercury-mats)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  川普政府剛剛廢除了拜登時代對發電廠汞和其他有毒污染物的限制。隨著美國電力需求隨著新人工智慧資料中心的建設而增加，它正在廢除汞和空氣有毒物質標準（MATS）。這些標準對於燃煤電廠的污染特別有影響力[...]
-- **[Suspect in Tumbler Ridge school shooting described violent scenarios to ChatGPT](https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  不列顛哥倫比亞省 Tumbler Ridge 大規模槍擊事件的嫌疑人 Jesse Van Rootselaar 在槍擊事件發生前幾個月就向 OpenAI 員工發出警報。去年 6 月，Jesse 與 ChatGPT 進行了對話，其中涉及槍支暴力的描述，觸發了聊天機器人的自動審查系統。幾名員工擔心她的貼文可能 [...]
+- **[With AI, investor loyalty is (almost) dead: At least a dozen OpenAI VCs now also back Anthropic](https://techcrunch.com/2026/02/23/with-ai-investor-loyalty-is-almost-dead-at-least-a-dozen-openai-vcs-now-also-back-anthropic/)**  _TechCrunch · Artificial Intelligence · 2026-02-23 21:46 UTC_  
+  雖然一些雙重投資者是可以理解的，但另一些則更令人震驚，並表明對長期存在的道德利益衝突規則的漠視。
+- **[Anthropic accuses Chinese AI labs of mining Claude as US debates AI chip exports](https://techcrunch.com/2026/02/23/anthropic-accuses-chinese-ai-labs-of-mining-claude-as-us-debates-ai-chip-exports/)**  _TechCrunch · Artificial Intelligence · 2026-02-23 19:57 UTC_  
+  Anthropic 指責 DeepSeek、Moonshot 和 MiniMax 使用 24,000 個虛假帳戶來提煉 Claude 的人工智慧能力，而美國官員正在爭論旨在減緩中國人工智慧進步的出口管制。
+- **[Google’s Cloud AI leads on the three frontiers of model capability](https://techcrunch.com/2026/02/23/googles-cloud-ai-lead-on-the-three-frontiers-of-model-capability/)**  _TechCrunch · Artificial Intelligence · 2026-02-23 19:18 UTC_  
+  人工智慧模型同時挑戰三個前沿：原始智慧、回應時間，以及你可能稱之為「可擴展性」的第三種品質。
+- **[OpenAI calls in the consultants for its enterprise push](https://techcrunch.com/2026/02/23/openai-calls-in-the-consultants-for-its-enterprise-push/)**  _TechCrunch · Artificial Intelligence · 2026-02-23 18:11 UTC_  
+  OpenAI 正在與四家顧問巨頭合作，努力推動其 OpenAI Frontier 人工智慧代理平台得到更多採用。
 
 ## 🧠 深度觀點
 
-- **[Samsung is adding Perplexity to Galaxy AI](https://www.theverge.com/tech/882921/samsung-is-adding-perplexity-to-galaxy-ai)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  除了召喚 Bixby 或 Gemini 之外，Galaxy S26 用戶還可以透過說「嘿，Plex」來召喚 Perplexity。將 Perplexity 整合到 Galaxy AI 中只是該公司擁抱「多智能體生態系統」的要素之一。通常，人們會根據自己的優勢使用不同的人工智慧代理來完成不同的任務[…]
-- **[How many AIs does it take to read a PDF?](https://www.theverge.com/ai-artificial-intelligence/882891/ai-pdf-parsing-failure)**  _The Verge · AI · 2026-02-24 01:04 UTC_  
-  去年 11 月，眾議院監督委員會剛剛發布了杰弗裡·愛潑斯坦 (Jeffrey Epstein) 遺產中的 20,000 頁文件，盧克·伊格爾 (Luke Igel) 和一些朋友四處點擊，試圖通過亂碼的電子郵件線程和坦白說“噁心”的 PDF 查看器來追踪對話線索。在接下來的幾個月中，司法部 [...]
+- **[Guide Labs debuts a new kind of interpretable LLM](https://techcrunch.com/2026/02/23/guide-labs-debuts-a-new-kind-of-interpretable-llm/)**  _TechCrunch · Artificial Intelligence · 2026-02-23 17:53 UTC_  
+  該公司開源了一個包含 80 億參數的 LLM，Steerling-8B，採用新架構進行訓練，旨在使其行為易於解釋。
+- **[The human work behind humanoid robots is being hidden](https://www.technologyreview.com/2026/02/23/1133508/the-human-work-behind-humanoid-robots-is-being-hidden/)**  _MIT Technology Review · AI · 2026-02-23 17:05 UTC_  
+  這個故事最初出現在我們關於人工智慧的每週通訊《演算法》中。若要先在您的收件匣中收到此類故事，請在此處註冊。一月份，世界上最有價值公司的負責人英偉達的黃仁勳宣稱，我們正在進入實體人工智慧時代，屆時人工智慧將超越語言和聊天機器人…
 
 ## 🤖 RAG 資訊
 

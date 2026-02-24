@@ -5,6 +5,23 @@
     box-sizing: border-box;
 }
 
+a {
+    color: #9df8ff;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+}
+
+a:visited {
+    color: #7fe8ff;
+}
+
+a:hover,
+a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 body {
     font-family: 'Noto Sans TC', sans-serif;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -29,6 +46,28 @@ header {
     margin-bottom: 40px;
     padding-bottom: 20px;
     border-bottom: 2px solid #4a4a8a;
+}
+
+.quick-links {
+    margin-top: 12px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-links a {
+    background: rgba(120, 220, 255, 0.18);
+    padding: 8px 16px;
+    border-radius: 999px;
+    color: #c4fff9;
+    border: 1px solid rgba(196, 255, 249, 0.5);
+    text-shadow: 0 0 6px rgba(0, 255, 255, 0.35);
+}
+
+.quick-links a:hover {
+    background: rgba(196, 255, 249, 0.3);
+    color: #ffffff;
 }
 
 h1 {

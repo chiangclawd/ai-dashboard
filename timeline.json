@@ -1,18 +1,35 @@
 [
   {
-    "date": "2026-02-24",
-    "updated": "2026-02-24 09:43",
+    "date": "2026-02-25",
+    "updated": "2026-02-25 01:16",
     "headlines": [
-      "Canva acquires startups working on animation and marketing",
-      "A Meta AI security researcher said an OpenClaw agent ran amok on her inbox"
+      "Nvidia challenger AI chip startup MatX raised $500M",
+      "Spanish ‘soonicorn’ Multiverse Computing releases free compressed AI model"
     ],
     "industry": [
-      "With AI, investor loyalty is (almost) dead: At least a dozen OpenAI VCs now also back Anthropic",
-      "Anthropic accuses Chinese AI labs of mining Claude as US debates AI chip exports"
+      "Uber engineers built an AI version of their boss",
+      "Anthropic won’t budge as Pentagon escalates AI dispute"
     ],
     "highlights": [
-      "Guide Labs debuts a new kind of interpretable LLM",
-      "The human work behind humanoid robots is being hidden"
+      "Music generator ProducerAI joins Google Labs",
+      "Meta strikes up to $100B AMD chip deal as it chases ‘personal superintelligence’"
+    ],
+    "link": "history/2026-02-25.md"
+  },
+  {
+    "date": "2026-02-24",
+    "updated": "2026-02-24 23:00",
+    "headlines": [
+      "Anthropic won’t budge as Pentagon escalates AI dispute",
+      "Google adds a way to create automated workflows to Opal"
+    ],
+    "industry": [
+      "OpenAI COO says ‘we have not yet really seen AI penetrate enterprise business processes’",
+      "Music generator ProducerAI joins Google Labs"
+    ],
+    "highlights": [
+      "Final 4 days to save up to $680 on your TechCrunch Disrupt 2026 pass",
+      "Anthropic launches new push for enterprise agents with plug-ins for finance, engineering, and design"
     ],
     "link": "history/2026-02-24.md"
   }

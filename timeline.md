@@ -1,10 +1,17 @@
 # AI 儀表板時間軸
 
+## 2026-02-25
+- 🕒 更新時間：2026-02-25 01:16
+- 🔥 頭條：Nvidia challenger AI chip startup MatX raised $500M / Spanish ‘soonicorn’ Multiverse Computing releases free compressed AI model
+- 💼 產業：Uber engineers built an AI version of their boss / Anthropic won’t budge as Pentagon escalates AI dispute
+- 🧠 深度：Music generator ProducerAI joins Google Labs / Meta strikes up to $100B AMD chip deal as it chases ‘personal superintelligence’
+- 📄 [完整內容](history/2026-02-25.md)
+
 ## 2026-02-24
-- 🕒 更新時間：2026-02-24 09:43
-- 🔥 頭條：Canva acquires startups working on animation and marketing / A Meta AI security researcher said an OpenClaw agent ran amok on her inbox
-- 💼 產業：With AI, investor loyalty is (almost) dead: At least a dozen OpenAI VCs now also back Anthropic / Anthropic accuses Chinese AI labs of mining Claude as US debates AI chip exports
-- 🧠 深度：Guide Labs debuts a new kind of interpretable LLM / The human work behind humanoid robots is being hidden
+- 🕒 更新時間：2026-02-24 23:00
+- 🔥 頭條：Anthropic won’t budge as Pentagon escalates AI dispute / Google adds a way to create automated workflows to Opal
+- 💼 產業：OpenAI COO says ‘we have not yet really seen AI penetrate enterprise business processes’ / Music generator ProducerAI joins Google Labs
+- 🧠 深度：Final 4 days to save up to $680 on your TechCrunch Disrupt 2026 pass / Anthropic launches new push for enterprise agents with plug-ins for finance, engineering, and design
 - 📄 [完整內容](history/2026-02-24.md)
 
 ## 2026-02-23
